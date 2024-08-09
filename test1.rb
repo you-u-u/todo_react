@@ -11,3 +11,6 @@ p @number_of_100yen.pop
 p @number_of_100yen
 p @number_of_100yen.length
 p @number_of_100yen.count(100)
+
+
+
