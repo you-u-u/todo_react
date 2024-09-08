@@ -1,24 +1,37 @@
+=begin
 n = gets.chomp.to_i
-food = 0
-book = 0
-cloth = 0
-other = 0
+categories = { 0 => 0, 1 => 0, 2 => 0, 3 => 0 }
 
-n.times do
-  mer = gets.split.map(&:to_i)
-  if mer[0] == 0
-    food += mer[1]
-  elsif mer[0] == 1
-    book += mer[1]
-  elsif mer[0] == 2
-    cloth += mer[1]
-  else
-    other += mer[1]
-  end
+n.times do 
+  k, p = gets.split.map(&:to_i)
+  categories[k] += p
+  p categories
 end
 
-points = food/100 * 5 + book/100 *3 + cloth/100 * 2 + other/100
+point_rate = {0=>5, 1=>3, 2=>2, 3=>1 }
 
+points = categories.sum{|category, total| total/100*point_rate[category]}
 puts points
 
+=end
 
+
+
+
+
+
+
+n= gets.chomp.to_i
+mer = {0=>0,1=>0,2=>0,3=>0}
+
+n.times do 
+  k, p = gets.split.map(&:to_i)
+  mer[k] += p
+end
+p mer
+point_rate = {0=>5,1=>3,2=>2,3=>1}
+
+points = mer.sum {|k, p| p*point_rate[k]}
+
+
+puts points
