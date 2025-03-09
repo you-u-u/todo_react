@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  color: #666;
+}
+
+input {
+  border-radius: 8px; /*角を丸くする*/
+  border: none; 
+  padding: 6px 16px; /*余白：上下 左右*/
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 4px 10px;
+  margin: 0px 3px;
+}
+
+button:hover{
+  background-color: rgb(206, 38, 181);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+/* .input-area {
+  background-color: pink;
+  width: 400px;
+  height: 30px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+} */
+
+.incomplete-area {
+  border: 2px solid pink;
+  width: 400px;
+  min-height: 100px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.complete-area {
+  background-color: pink;
+  border: 2px solid rgb(250, 219, 224);
+  width: 400px;
+  min-height: 100px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.title { 
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.list-row { 
+  display: flex;
+  align-items: center;
+}
+
+.todo-item {
+  margin: 6px;
+}
